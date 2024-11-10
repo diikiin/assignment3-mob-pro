@@ -1,4 +1,4 @@
-package com.dikin.assignment3
+package com.dikin.assignment3.composables
 
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
