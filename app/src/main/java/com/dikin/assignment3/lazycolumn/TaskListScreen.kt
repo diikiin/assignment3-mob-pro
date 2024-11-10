@@ -37,6 +37,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.dikin.assignment3.ui.theme.Assignment3Theme
+import com.dikin.assignment3.viewmodel.TaskEntity
 import com.dikin.assignment3.viewmodel.TaskViewModel
 
 @Composable
@@ -83,7 +84,7 @@ fun TaskListScreen(taskViewModel: TaskViewModel = viewModel(), modifier: Modifie
 }
 
 @Composable
-fun TaskItem(task: Task) {
+fun TaskItem(task: TaskEntity) {
     var showDialog by remember { mutableStateOf(false) }
 
     Card(
@@ -112,7 +113,7 @@ fun TaskItem(task: Task) {
 }
 
 @Composable
-fun TaskDetailDialog(task: Task, onDismiss: () -> Unit) {
+fun TaskDetailDialog(task: TaskEntity, onDismiss: () -> Unit) {
     AlertDialog(
         onDismissRequest = { onDismiss() },
         title = { Text(text = "Task Details") },
